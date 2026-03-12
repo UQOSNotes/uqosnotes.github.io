@@ -2,26 +2,5 @@
 layout: layout.njk
 title: Home
 ---
-<h2>Course Notes</h2>
-<p style="margin: 0.75rem 0 1.5rem; color: #555;">Free, open source notes for UQ courses — written by students, for students.</p>
-
-{% if notes | length %}
-  {% for faculty in notes %}
-    {% set courses = notes[faculty] %}
-    <section id="{{ faculty }}" style="margin-bottom: 2rem;">
-      <h3 style="font-size: 1rem; text-transform: uppercase; letter-spacing: 0.05em; color: #777; margin-bottom: 0.75rem;">{{ faculty }}</h3>
-      <ul style="list-style: none; border: 1px solid #e0e0e0; border-radius: 6px; overflow: hidden;">
-        {% for course in courses %}
-          <li style="border-bottom: 1px solid #e0e0e0;">
-            <a href="{{ course.url }}" style="display: block; padding: 0.75rem 1rem; text-decoration: none; color: #1a1a1a;" target="_blank" rel="noopener">
-              {{ course.code }}
-              <span style="float: right; color: #777; font-size: 0.85rem;">PDF ↗</span>
-            </a>
-          </li>
-        {% endfor %}
-      </ul>
-    </section>
-  {% endfor %}
-{% else %}
-  <p style="color: #777;">No notes available yet. <a href="https://github.com/UQOSNotes/notes">Be the first to contribute!</a></p>
-{% endif %}
+<p style="margin-bottom: 1.5rem; color: #555;">Free, open source course notes for University of Queensland students — written by students, for students.</p>
+<a href="/notes/" style="display: inline-block; padding: 0.6rem 1.2rem; background: #1a1a1a; color: #fff; text-decoration: none; border-radius: 5px; font-size: 0.95rem;">Browse notes</a>

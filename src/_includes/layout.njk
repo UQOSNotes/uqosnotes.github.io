@@ -10,39 +10,9 @@
     header { border-bottom: 1px solid #e0e0e0; padding-bottom: 1rem; margin-bottom: 2rem; display: flex; justify-content: space-between; align-items: center; }
     header a { text-decoration: none; color: inherit; }
     header h1 { font-size: 1.25rem; }
-
-    nav { display: flex; align-items: center; gap: 1.5rem; }
-    nav > a { color: #555; text-decoration: none; }
-    nav > a:hover { color: #1a1a1a; }
-
-    .dropdown { position: relative; }
-    .dropdown-toggle { color: #555; text-decoration: none; cursor: default; user-select: none; }
-    .dropdown-toggle:hover { color: #1a1a1a; }
-    .dropdown-menu {
-      display: none;
-      position: absolute;
-      top: calc(100% + 0.5rem);
-      left: 50%;
-      transform: translateX(-50%);
-      background: #fff;
-      border: 1px solid #e0e0e0;
-      border-radius: 6px;
-      min-width: 140px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-      z-index: 100;
-      overflow: hidden;
-    }
-    .dropdown:hover .dropdown-menu { display: block; }
-    .dropdown-menu a {
-      display: block;
-      padding: 0.5rem 1rem;
-      color: #555;
-      text-decoration: none;
-      font-size: 0.9rem;
-      white-space: nowrap;
-    }
-    .dropdown-menu a:hover { background: #f5f5f5; color: #1a1a1a; }
-
+    nav { display: flex; gap: 1.5rem; }
+    nav a { color: #555; text-decoration: none; }
+    nav a:hover { color: #1a1a1a; }
     footer { border-top: 1px solid #e0e0e0; margin-top: 3rem; padding-top: 1rem; font-size: 0.85rem; color: #777; }
     footer a { color: inherit; }
   </style>
@@ -51,16 +21,7 @@
   <header>
     <a href="/"><h1>UQ Open Source Notes</h1></a>
     <nav>
-      <div class="dropdown">
-        <a href="/" class="dropdown-toggle">Notes</a>
-        {% if notes | length %}
-        <div class="dropdown-menu">
-          {% for faculty in notes %}
-            <a href="/#{{ faculty }}">{{ faculty }}</a>
-          {% endfor %}
-        </div>
-        {% endif %}
-      </div>
+      <a href="/notes/">Notes</a>
       <a href="/about/">About</a>
     </nav>
   </header>

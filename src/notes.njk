@@ -1,0 +1,27 @@
+---
+layout: layout.njk
+title: Notes
+---
+<h2>Course Notes</h2>
+<p style="margin: 0.75rem 0 1.5rem; color: #555;">Browse available notes below. Click a course to open its PDF.</p>
+
+{% if notes | length %}
+  {% for faculty in notes %}
+    {% set courses = notes[faculty] %}
+    <section style="margin-bottom: 2rem;">
+      <h3 style="font-size: 0.8rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; color: #999; margin-bottom: 0.5rem;">{{ faculty }}</h3>
+      <ul style="list-style: none; border: 1px solid #e0e0e0; border-radius: 6px; overflow: hidden;">
+        {% for course in courses %}
+          <li style="border-bottom: 1px solid #e0e0e0;">
+            <a href="{{ course.url }}" style="display: flex; justify-content: space-between; align-items: center; padding: 0.65rem 1rem; text-decoration: none; color: #1a1a1a;" target="_blank" rel="noopener">
+              <span>{{ course.code }}</span>
+              <span style="color: #999; font-size: 0.8rem;">PDF ↗</span>
+            </a>
+          </li>
+        {% endfor %}
+      </ul>
+    </section>
+  {% endfor %}
+{% else %}
+  <p style="color: #777; margin-top: 1rem;">No notes yet. <a href="https://github.com/UQOSNotes/notes">Be the first to contribute!</a></p>
+{% endif %}
