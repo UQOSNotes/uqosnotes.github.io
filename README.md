@@ -1,5 +1,5 @@
 # UQ Open Source Notes: Site repository
-[![License: CC BY-SA 4.0](https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-sa/4.0/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## Introduction
 This repository is the front-end for the UQ Open Source Notes website, found at https://uqosnotes.github.io/, and storage for the compiled pdf notes. The notes repository can be found at https://github.com/UQOSNotes/notes.
