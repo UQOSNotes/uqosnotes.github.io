@@ -6,10 +6,10 @@ on:
   push:
     branches: [main]
     paths:
-      - 'src/**'
+      - 'src/**/*'
       - '.eleventy.js'
       - 'package.json'
-      - 'public/notes/**'
+      - 'public/notes/**/*'
 
 permissions:
   contents: read
