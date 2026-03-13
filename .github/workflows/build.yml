@@ -2,13 +2,14 @@
 name: Build and Deploy Site
 
 on:
-  workflow_dispatch:  # triggered by notes CI
+  workflow_dispatch:  # triggered manually if needed
   push:
     branches: [main]
     paths:
       - 'src/**'
       - '.eleventy.js'
       - 'package.json'
+      - 'public/notes/**'
 
 permissions:
   contents: read
