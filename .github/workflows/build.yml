@@ -6,12 +6,6 @@ on:
   push:
     branches: 
       - main
-    paths:
-      - '.github/workflows/**/*'
-      - 'src/**/*'
-      - '.eleventy.js'
-      - 'package.json'
-      - 'public/notes/**/*'
 
 permissions:
   contents: read
